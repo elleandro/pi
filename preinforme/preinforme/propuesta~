@@ -1,0 +1,68 @@
+Propuesta de Proyecto Integrador
+
+Parte I - Microelectrónica en la Argentina.
+La Microelectrónica en la Argentina es hoy en día una disciplina ultra marginal. Intentaré recabar información sobre el estado actual, cuantos laboratorios realizan trabajos en uelectronica, cúantas materias de grado y postgrado existen, y también las causas de esto, y cúales son las posibilidades actuales para el estudio masivo en la educación superior de grado. 
+Con esa información, fundamentaré las razones por las cuales en este trabajo el foco principal está en, por un lado, utilizar software libre* y producir documentación detallada que sea útil en la educación, y por otro, acercar al mundo de la ingenieria, herramientas de las ciencias de la computación, necesarias para que la investigación y desarrollo de la microelectrónica en la Argentina sea una diciplina con autonomía tecnológica**.
+También fundamentaré las razones de porqué utilizo distintos HDLs que, buscaban dar soluciones a problemas actuales relacionados al desafío y cuello de botella que significan la metodología de diseño digital actual (ITSR 2003). Estos HDL  son totalmente integrables dentro de un flujo de diseño industrial.
+
+Parte II - Explorar las posibilidades que brinda la programación funcional al diseño de circuitos digitales semi-custom. 
+Estas posibilidades son:
+Model
+* Utilizar un lenguaje de alto nivel embebido en Haskell[0] para el flujo de diseño, que permite:
+Descripción parametrizable. Circuitos que se adaptan al entorno[2]. Simulación simbólica. Verificación formal de propiedades de los circuitos descriptos, y la utilización de otras técnicas disponibles para el chequeo de software.
+Objetivo:
+Generar desde la descripción de alto nivel en Lava[Lava] una descripción a nivel de compuertas (en VDHL) de forma automática.
+Luego, utilizando Wired[Wired] realizar una descripción de más bajo nivel, teniendo en cuenta efectos físicos cómo retardos ó consumo de energía en niveles tempranos del diseño.
+Metodología de trabajo propuesta:
+Se elije un circuito de complejidad media (Brent-Kung fast adder) a implementar, se buscan los algoritmos que lo resuelva, y se implementa en el lenguaje. Luego se crea un modelo de referencia simple (ripple carry adder), se especifican las propiedades matemáticas que debe cumplir dicho circuito, se verifican automáticamente, y luego se realiza un chequeo de equivalencia con el modelo de mayor complejidad.
+
+Parte III - Explorar las posibilidades de un probador automático de teoremas.
+Implementar el mismo circuito en ACL2[1], para explorar las capacidades del ACL2, que permite:
+Expresar el sistema y las propiedades deseadas en una forma lógica matemática.
+Verificación formal de arquitecturas, por medio de un probador interactivo-automático de teoremas. Este sistema fué el que se utilizó para hacer la verificación formal del algoritmo de división de la unidad de punto flotante del AMD5K86[Moore et al.] y posteriores. El bug más famoso es el que tuvo el pentium en su divisor de punto flotante, que le costó 200M usd a intel.
+
+Parte III - Layout
+* Realizar de forma automática el layout, partiendo de la descripción a nivel de compuertas que obtengo del lenguaje de descripción de hardware. Probablemente deba hacer algún aporte al código del programa para lograr la automatización del realizado del layout.
+Objetivos: Brindar una documentación detallada y didáctica de todo el flujo integrado.
+
+
+Parte IV - Simulación a nivel de transistores
+* Utilizar un simulador (gnucap) para simular modelos BSIM3V3 y BSIM4.
+* Postprocesamiento de los datos de la simulación y su presentación gráfica.
+Objetivos: Brindar una documentación detallada y didáctica de todo el flujo integrado.
+
+
+[0]: http://haskell.org, http://en.wikipedia.org/Haskell
+[1]: http://www.cs.utexas.edu/users/moore/acl2/ , http://en.wikipedia.org/Acl2
+[2]: M. Sheeran, “Parallel prefix network generation: an application of functional programming In Hardware Design and Functional Languages,” in Hardware design and Functional Languages (HFL07), Braga, Portugal, March 2007.
+[Lava]: Embedded Languages for Describing and Verifying Hardware (Koen Claessen)
+[Wired]: Functional Programming Enabling Flexible Hardware Design at Low Levels of Abstraction (Emil Axelsson)
+MOORE, J. S., LYNCH, T., AND KAUFMANN, M. 1996. A Mechanically checked proof of the correctness of the AMD5K86 floating point division algorithm. http://devil.ece.utexas.edu:80/lynch/divide/divide.html
+
+
+
+* Lava *
+Cosas Importantes:
+No hace el ruteo (conexión interna del circuito), sólo ubica los elementos.
+
+Lava is a system that supports the design and veriﬁcation of circuits. It is an extensible domain speciﬁc language embedded in the standard functional programming language Haskell. In Lava, the user has the option to exercise ﬁne control over circuit layout by using layout combinators or connection patterns. The user writes circuit generators, which when run produce the desired netlist. This approach to the control of layout is almost unique to Lava, although it is included also in O’Donnell’s Hydra system. It has proved useful for datapath design for FPGA cores.
+Satnam Singh at Xilinx Research Labs developed a Xilinx-speciﬁc version of Lava and used it to develop a number of successful high performance parameterised cores for Xilinx customers, often rescuing problematic design projects in the process. What we have done is give the user control over circuit placement, leaving routing to the underlying implementation tools. This was just the right choice, as it gives the designer just enough control to allow him to get the layout that he wants, but without forcing him to make low-level calculations or to think in terms of a coordinate
+system. The abstract notion of layout that we have introduced in Lava allow us to generate low level code with placement information. Our most recent work on Lava has explored the notion of clever circuits – circuits that have additional parameters carrying non-functional properties, allowing them to adapt to their contexts. We demonstrated the use of the method in the adaptive generation of multiplier reduction trees. This gives a TDM-like multiplier in which
+both wire and gate-delay can be used to determine the topology of the ﬁnal result. We have also made a particular study of parallel preﬁx circuits, and have shown how to use clever circuits to generate parallel preﬁx networks that are adapted to the delay proﬁle of their inputs.
+
+2.
+* Wired *
+    Wired is also a domain speciﬁc language embedded in Haskell. It again uses layout combinators to control the structuring of circuits. But in Wired the user has complete control over geometry, and in particular over the length and width of wires. The descriptions compose not only the geometry, but also the circuit behaviour, which is expressed as relations (rather than functions).
+Forward or backward symbolic simulation can be used, as in Lava, to analyse functional and non-functional aspects of the circuit, in a way that is better developed than the ad hoc approach used in Lava. The relational nature of the language allows, in addition, bidirectional analyses, such as Elmore delay, in which capacitances ﬂow in one direction and resistances in the other.
+
+2.1
+* Lava + Wired *
+1) Methods of mixing logical and physical design in rapid design exploration that takes account of both functional and non-functional properties, particularly power consumption
+2) Methods of constructing highly parameterised, adaptive, reusable IP blocks for fast data-paths 
+
+*Esto requiere de una planificación nacional que sostenga la decisión de utilizar, documentar y mejorar cierto conjunto de software para el estudio de la microelectrónica. Por un lado, hoy nos encontramos con el desafío de ponernos al día con la disciplina de la microelectrónica, y para ello es necesario comenzar desde las bases. Para eso nada mejor que herramientas que nos permitan controlar todo el proceso de desarrollo.
+**Para dar un ejemplo de lo que es autonomía tecnológica en la microelectrónica, utilizamos la operación matemática del producto:
+Supongamos que nuestro diseño necesita de un bloque que multiplique dos números binarios a y b:
+Si nuestras herramientas nos permiten hacer un algoritmo del tipo:
+c = a * b
+Las posibilidades de sintetizar un circuito que realice esta operación son muy variadas, existen muchos algoritmos que están optimizados para mayor velocidad, otros para menor consumo de energía, otros para mayor uniformidad en el layout. Lo importante es poder entender y controlar hasta el último detalle, porque siempre las soluciones son mejorables, y  sino, tan solo somos simples operadores de una tecnología que es diseñada por la empresa proveedora de software.

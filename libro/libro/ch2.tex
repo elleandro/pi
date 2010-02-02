@@ -1,0 +1,72 @@
+%ch2.tex
+\chapter{Up to Homotopy is Good Enough}\label{gdenuf}
+
+\begin{center}
+\small{\em A log with nine holes\/}---\,old Turkish riddle for a man
+\end{center}
+
+\section{Introducing homotopy}
+In a topological category, a pair of maps   $f,g : X
+\rightarrow Y $ which agree on  $A \subseteq X$  is said to admit a
+{\bf homotopy}\index{homotopy|bi} $H$ from $f$ to $g$ {\bf relative
+to}\index{rel|bi} $A$ if there is a
+map\index{homotopy!relative|bi}\index{relative!homotopy|bi}
+    $$ X\times \I \stackrel{H}{\longrightarrow} Y : (x,t) \longmapsto H_{t}(x) $$
+with
+$H_t(a)=H(a,t) = f(a)=g(a)$ for all $a\in A$,
+$H_0 = H(\ ,0) = f$, and $H_1 = H(\ ,1) = g$.
+Then we write  $f\stackrel{H}\sim g \  (rel A)$.
+
+If  $A = \emptyset$   or  $A$ is clear from the context (such as $A={\ast}$
+for pointed spaces, {\em cf.} below), then we write   $f\stackrel{H}\sim g$,
+or sometimes just $f\sim g$  and say that  $f$  and  $g$  are  {\bf
+homotopic}\index{homotopic|bi}.
+
+We can also think of $H$  as either of:
+\begin{itemize}
+\item a 1-parameter family of maps
+$$\{H_{t} : X \longrightarrow Y \ \mid \ t \in [0,1]\ \}\ \  \mbox{with}
+\ \   H _{0} = f \ \ \mbox{and} \ \   H _{1} = g\, ;$$
+\item  a curve  $c_{H}$   from   $f$   to $g$ in the function space   $Y^{X}$
+ of maps from  $X$  to  $Y$
+    $$ c_{H} : [0,1] \longrightarrow Y^X : t \longmapsto H_{t}\,. $$
+\end{itemize}
+
+We call   $f$  {\bf nullhomotopic}\index{nullhomotopic|bi} or  {\bf
+inessential}\index{inessential|bi} if
+it is homotopic to a constant map. Intuitively, we picture   $H$  as a
+continuous deformation of the {\em graph\/} of  $f$  into that of  $g.$
+The following is an easy exercise.
+\begin{proposition}
+For all  $A \subseteq X$, $\sim (rel A)$  is an
+equivalence relation on the set of maps from  $X$  to  $Y$  which
+agree on $A$.
+\end{proposition}
+Maps in the same equivalence class of   $\sim (rel A)$  are
+said to be {\bf homotopic $(rel A)$}.
+
+\begin{table}
+\begin{center}
+\framebox[1.5in]{\begin{tabular}{c | c | c }
+$n$ & $S^n$ & $R^n$ \\ \hline
+1 & 1 & 1 \\
+2 & 1 & 1 \\
+3 & 1 & 1 \\
+4 & 1 & $\infty$ \\
+5 & 1 & 1 \\
+6 & 1 & 1 \\
+7 & 28 & 1 \\
+8 & 2 & 1 \\
+9 & 8 & 1 \\
+10 & 6 & 1 \\
+11 & 992 & 1 \\
+12 & 1 & 1 \\
+13 & 3 & 1 \\
+14 & 2 & 1 \\
+15 & 16256 & 1 \\
+\end{tabular}}
+\caption{Numbers of distinct differentiable structures on real $n$-space
+and $n$-spheres}
+\label{diffstruc}
+\end{center}
+\end{table}

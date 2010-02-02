@@ -1,0 +1,188 @@
+EAMTA 2007
+El objetivo de esta escuela es difundir la microelectrónica en el país, y acercarla a estudiantes, docentes e investigadores. 
+El logro más grande de esta escuela es que rompió la barrera sicológica de muchos estudiantes que veían la microelectrónica como algo muy lejano, algo que sólo se hacía en Estados Unidos, Europa o en Asia. Y la verdad es que hoy en día es una disciplina que está al alcance de cualquier estudiante de electrónica, sea del país que sea.
+
+Es sorprendente ver que los planes de estudio de electrónica siguen teniendo como principal elemento de estudio a los transistores bipolares, en vez de los transistores MOS. Y hoy en día la electrónica en su mayoría es integrada en chips, y estos se hacen con transistores MOS. 
+Durante esta semana se dictaron clases sobre VLSI, Física del semiconductor MOS, diseño analógico y CADs, con el objetivo de que cada grupo diseñe un pequeño sistema digital y se mande a fundir a MOSIS[1].
+El primer día a la hora de ir a las computadoras a implementar un comparador de 4 bits, hicieron una aclaración:
+"Lamentablemente no toda la gente va a poder realizar el proyecto porque contamos con sólo X licencias del programa". 
+Como los grupos eran de 2 por pc, sólo 2X personas tuvieron la posibilidad de hacer el proyecto. Pero la cantidad de asistentes a la escuela fué de 4X. Vale aclarar que no todos los 4X asistentes querían hacer el proyecto.
+Para el año que viene, la 3ra EAMTA se hará en Buenos Aires, y se espera que asistan 8X personas.
+Conociendo como se interesan los distribuidores de software en regalar sus herramientas para crear dependencia, creo que el año que viene todo va a estar bien, y no van a faltar licencias.
+
+Humildemente, yo creo que si el objetivo es la difusión y masificación de la microelectrónica en la Argentina, es menos efectivo hacerlo con herramientas de software privativo.  Pero en vez de enumerar las desventajas, lo voy a plantear alrevez, y voy a resaltar los aspectos positivos de difundir la disciplina de la microelectrónica junto con las herramientas libres.
+Veamos el mundo académico:
+Creo que las herramientas de diseño y simulación no deben ser una caja negra para quien las usa y menos para quien se está formando. Un software que no pueda ser estudiado no es apropiado para la educación, y menos para la investigación.
+El espiritu innovador, explorador, temerario, inventivo y porfiado del estudiante encuentra con el Software Libre un mundo abierto y lleno de desafíos, tal cual es el mundo real donde va a trabajar.
+
+
+
+industria.
+
+
+academia + industria
+
+
+* Porque cuando el estudiante vuelve a su casa, no puede continuar trabajando.
+* Porque el estudiante cuando egrese, ya no dispondrá de la herramienta.
+
+
+La matemática, la física y la computación son herramientas
+
+
+
+
+Voy a enumerar algunas razones que son importantes:
+* El estudiante necesita tener la herramienta también en su casa, al igual que necesita tener libros y su calculadora, etc.
+
+
+ Es cierto que no todos los que usen una herramienta van a estar modificando el código para mejorarlo o adaptarlo, pero los proyectos en general se realizan colectivamente, y seguro que alguno en esa
+
+
+* Hoy en día, el diseño de circuitos de alta velocidad y performance se realiza con herramientas privativas, pero sin quitar mérito a los diseñadores que las utilizan, son simples operadores de una herramienta de la cúal poco conocen sobre su funcionamiento interno, y nada pueden hacer por mejorarla. Teniendo en cuenta que la ITSR 2003 dijo que "design productivity is the most massive and crosscutting challenge the semiconductor industry", . Utilizando software libre es factible estudiar y formarse como diseñador de bajo nivel.
+
+* Están dadas las condiciones para que los estudiantes de la Argentina tengan acceso a la microelectrónica con un perfil más desarrollador que operario.
+
+* En la ingeniería se tiene como solución optima para un problema aquella con la cual se utilicen menos recursos y de mayor eficacia. Eso es así quizás porque los ingenieros trabajan (mayormente) en el proceso productivo y no se pueden detener a reelaborar un modelo para brindar una mejor solución.
+
+
+ suele pensar que lo importante es la solución rápida y efectiva.
+
+
+* ¿Qué guia el punto de vista general de todas estas propuestas?
+ En general lo que guia este punto de vista es la posibilidades que se pierden si se opta por el modelo privativo.
+
+Pero toda esta gente está en la universidad y/o en institutos de investigación. Como están dadas las cosas, en poco tiempo todas estas instituciones van a adquirir las licencias de estos programas, ya que las distribuidoras de software venden licencias a universidades a un precio diez veces inferior del comercial. Poniendolo en pocas palabras, el costo no es un problema.
+
+
+
+Para planes de estudio:
+¿Se puede medir?: ¿Qué tiene más potencialidad? ¿Qué es mejor? ¿Diseñar con circuitos discretos, o diseñar circuitos integrados?
+La potencialidad se mide por medio del costo de escalabilidad:
+Cantidad - Costo - Rentabilidad(cuanto se lleva el proveedor de insumos y cuanto el desarrollador)
+1 unidad
+10 unidades
+100 unidades
+1.000 unidades
+10.000 unidades
+100.000 unidades
+1.000.000 unidades
+10.000.000 unidades
+
+¿Qué es más flexible?
+
+¿Qué tiene mayor valor?
+
+¿Qué profesional tiene mayor potencial productivo?
+
+
+
+
+
+
+
+
+
+----------------- Averiguar más sobre este proyecto y en qué fase se encuentra -------------
+ Presentación del proyecto
+
+A raíz de la convocatoria a la presentación de proyectos “Idea Proyecto - Programa en Áreas Estratégicas” de la Secretaría de Ciencia, Tecnología e Innovación Productiva (SECyT), se formó entre las instituciones mencionadas una Asociación Ad Hoc que ha presentado el proyecto solicitando fondos por u$s 3.000.000, que equivale al 50% de la inversión necesaria para los primeros cuatro años. Algunos de los objetivos que sustentan el monto solicitado son: disponer en el país de 20 estaciones de diseño para desarrollo de productos y formación de RRHH; dotar a las universidades participantes de la infraestructura necesaria para diseñar, simular, caracterizar y testear chips fabricados (software y equipos de medición); formar 20 profesionales idóneos en 5 años y generar la capacidad de formar, como mínimo, 15 profesionales por año; y completar seis proyectos de desarrollo y fabricación para empresas en los cuales se hará transferencia de tecnología a las mismas y se generará la capacidad de acompañar ocho proyectos de integrados (tamaño promedio) por año.
+
+
+
+
+
+
+
+
+
+
+Desde los inicios de la microelectrónica, en las universidades los estudiantes se formaron con herramientas  libres, ejemplo de esto son spice (berkeley), magic (), alliance(), MIT, VIS,SIS (Berkeley) De hecho, todos estos docentes que producían estas herramientas, luego iniciaron startups o comenzaron a trabajar en las empresas de CAD que luego se transformaron en monopolio.
+
+El modelo propuesto no es escalable, puesto que si se desea extender el estudio de la microelectrónica a todas las universidades, el presupuesto anual[anual] necesario aumentaría geométricamente, porque por cada estación de trabajo extra significa una licencia más a pagar.
+
+
+¿Cómo se forman diseñadores que saben que la herramienta que utilizan es más que una caja negra?
+Primero, tomando la desición de hacerlo, porque no existe ningún tiempo extra para un diseñador, para que además de su trabajo y estudio rutinario, se pretenda que también estudie nuevas herramientas por si mismo, que además no son tan productivas como algunas de las existentes hoy en día. Es decir, el trabajo diario, si lo quiere hacer más rápido, lo hará con herramientas privativas, porque tiempo no sobra. Entonces, cuando se decide que un diseñador se formará con herramientas libres, se sabe de antemano que (en general) la curva de aprendizaje puede ser más pronuciada[curva], y que por dar un ejemplo, para el diseño top-down, no son comparables la productividad, porque unas están mucho más desarrolladas que otras.(apoyar con referencias ó fundamentar esto)
+
+Sumando gente que está cerca del software, se crea una base de profesionales multidiciplinaria mayor, generando sinergia entre los aportes y necesidades de las distintas disciplinas (diseño y desarrollo de herramientas)
+
+
+[curva]: Eso tiene un caracter muy temporal, porque si la primera camada se dedica a documentar el uso de las herramientas, en un año se consigue que la próxima generación, tenga ese camino totalmente allanado, es decir, aprenderá con mucha mayor rapidez.
+
++++ Averiguar los costos de las licencias -----
+Cadence:
+Incisive™ Verification Platform
+Encounter™ Digital IC Design Platform
+Virtuoso® Custom Design Platform
+Allegro™ Interconnect Platform
+
+Hay otro flujo de Mentor:
+Y otro de Synopsis
+
+
+
+
+
+
+En Europa: (fecha: 20080118)EUROPRACTICE Software Services are available to Academic Institutions and publicly funded Research  Laboratories.
+Licence Charge (excluding VAT):
+Combined IC & Systems Package
+	1 - 10 licences 	2400 EURO each
+	Additional licences (11+) 	480 EURO each
+
+Maintenance Cost Per Site (excluding VAT):
+Combined IC & Systems Package		1245 EURO (base price)
+    PLUS for Linux			200 EURO
+    PLUS for Solaris 			200 EURO
+
+
+
+
+
+Synopsis
+Tanner
+Mentor Graphics
+-----------------
+Algunos datos:
+Para EUROPRACTICE, los costos son:
+http://www.msc.rl.ac.uk/europractice/software/software_price.html
+---------
+EUROPRACTICE
+http://www.te.rl.ac.uk/europractice/
+
+
+
+Cadence & Universidades: 
+- extraído de http://www.cadence.com/support/university/ww_usp.aspx -
+
+Worldwide University Software Programs
+
+The goal of the Cadence® University Software programs is to grant easy access to leading electronic design automation (EDA) tools for educational institutions around the world. Our customers rely on skilled engineers entering the work force. As the leader in electronic design automation, we are committed to helping our customers by giving future engineers access to our world-class tools. In fact, we reach over thirty thousand students each year through these programs. By making our products readily available for instruction and academic research, Cadence is helping the electronics industry speed ideas to reality
+
+
+
+
+
+
+
+
+
+[anual]: En general las licencias tienen un .
+
+
+
+Hacer referencia al estudio de la UE sobre el crecimiento del software libre, y la proyección a futuro. (lo que mostró el italiano en las 7jrsl)
+
+
+
+No es una alternativa estratégica el aceptar licencias educativas más baratas ó inclusive gratis, además de perder las grandes posibilidades mas arriba mencionadas que brindan las herramientas libres y flexibles, tiene las siguientes desventajas:
+La universidad en vez de pensar de forma universal y estratégica, brinda capacitación gratuita a empresas desarrolladoras de software formando usuarios, perdiendo la oportunidad de formar parte de la comunidad de desarrolladores de las herramientas de diseño. Ejemplo positivo de esto es el proyecto de alliance que se desarrolla en una universidad francesa.
+Mantenemos la dependencia económica-tecnológica hacia los paises donde estas se desarrollan, ya en el país sólo se hará uso de las herramientas,  que el modelo de empresa posibler sólo será aquella donde la multinacional brinde el software y el pais los ingenieros.
+No permiten la apropiación de la tecnología utilizada en el software
+
+
+
+
+
+

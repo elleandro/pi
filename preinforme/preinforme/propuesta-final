@@ -1,0 +1,12 @@
+Parte I - Microelectrónica en la Argentina.
+El objetivo de esta sección será brindar información sobre el estado actual de la microelectrónica en nuestro país, obtener información sobre cuantos laboratorios realizan trabajos en microelectronica, cúantas materias de grado y postgrado existen.
+Parte II - Posibilidades que brinda la programación funcional al diseño de circuitos digitales semi-custom
+Utilizar un lenguaje de alto nivel embebido en Haskell[0] para el flujo de diseño, que permite:
+Descripción parametrizable de los circuitos. Circuitos que se adaptan al entorno[2]. Simulación simbólica. Verificación formal de propiedades de los circuitos descriptos, y la utilización de otras técnicas disponibles para el chequeo de software.
+Entregable: Generar desde la descripción de alto nivel en Lava[Lava] una descripción a nivel de compuertas (en VDHL) de forma automática. 
+Opcional: Luego, utilizando Wired[Wired] realizar una descripción de más bajo nivel, teniendo en cuenta efectos físicos cómo retardos ó consumo de energía en niveles tempranos del diseño.
+Metodología: Se elije un circuito de complejidad media a implementar (Brent-Kung fast adder), se buscan los algoritmos que lo resuelva, y se implementa en el lenguaje. Luego se crea un modelo de referencia simple (ripple carry adder), se especifican las propiedades matemáticas que debe cumplir dicho circuito, se verifican automáticamente, y luego se realiza un chequeo de equivalencia con el modelo de mayor complejidad.
+}
+
+
+agregar alg{}n lado fm9001 microprocesor
